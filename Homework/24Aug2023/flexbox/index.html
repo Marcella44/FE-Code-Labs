@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 0px;
+    }
+    .column {
+      float: left;
+    }
+    .sidebar {
+      width: 25%;
+    }
+    .main-content {
+      width: 50%;
+    }
+    .container {
+      text-align: center;
+      display: flex;
+    }
+    .container-cards {
+      display: flex;
+      padding: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .container-cards img {
+      width: 100%;
+    }
+    .card {
+      max-width: 33%;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 8px rgba(110, 15, 15, 0.26); 
+      padding: 20px;
+    }
+
+    /* 768px and below*/
+
+    @media screen and (max-width: 768px){
+      .column, .sidebar, .main-content {
+        float: none;
+        width: 100%;
+      }
+      .sidebar {
+        display: none;
+      }
+      .card {
+        max-width: calc(50% - 20px);
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .card {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="column sidebar">
+  <h2>Sidebar 1</h2>
+  <p>This is the content for the first sidebar.</p>
+</div>
+<div class="column main-content">
+  <h2>Main Content</h2>
+  <p>This is the main content area.</p>
+</div>
+ <div class="column sidebar">
+  <h2>Sidebar 2</h2>
+  <p>This is the content for the second sidebar.</p>
+ </div>
+</div>
+
+<div class="container-cards">
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS9GIRVMFsje-Ng1WVYDk6HgmMaIOe-yEPkg&usqp=CAU" alt="">
+    <h2>Card 1</h2>
+    <p>This is the content for the first card.</p>
+  </div>
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSENctUe5qjS6DzZjGpWowyKAL0v0Yo57cTqA&usqp=CAU" alt="">
+    <h2>Card 2</h2>
+    <p>This is the content for the second card.</p>
+  </div>
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgVzTUtly5zFjkZ8cMDa5epnmDPtKI2426yG0WPU_3QSrOq2dMiOe8SXQlrinckKxuVdM&usqp=CAU" alt="">
+    <h2>Card 3</h2>
+    <p>This is the content for the third card.</p>
+  </div>
+</div>
+</body>
+</html>

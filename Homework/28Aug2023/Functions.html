@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started with JavaScript</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <style>
+    body {
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+  
+  <script>
+
+    const hero = {
+      name: 'Bruce Wayne',
+      alias: 'Batman',
+      catchphrase: 'To the Batcave!',  // property
+      speak: function () {  //method
+        return 'Attention! ' + this.catchphrase;
+      },
+      attack: function (sound) {
+        // return '(punches bad guy)' + sound;
+        return `(punches bad guy) ${sound}`;
+       }
+    };
+
+    // a variable inside of an object is a property
+    // access a property
+
+    const thingToLookFor = 'alias';
+
+    console.log(hero.name); // Bruce Wayne
+    console.log(hero['name']); // Bruce Wayne 
+    console.log(hero[thingToLookFor]); //Batman-use bracket notation to pass in variables that are not properties in an object
+
+    // accessing methods (functions)
+
+    console.log(hero.speak);
+    console.log(hero.speak());
+    console.log(hero.attack('POWWWWW'));
+
+    'this is my string'.toUpperCase();
+
+  </script>
+</body>
+</html>
