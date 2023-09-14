@@ -15,7 +15,7 @@ const user = {
   }
 }
 
-user.fullName();  // this refers to user - the object before the function call
+user.fullName();  // this refers to user - the object before the function call // implicit scope
 
 const user2 = {
   firstName2: "Patrick",
@@ -25,7 +25,7 @@ const user2 = {
     this.hobbies.forEach(function(hobby) {
       console.log(hobby)
       console.log(this.firstName2)
-    }, this);  // pass in the this reference that points to user2 (this doesn't work for all methods)
+    }, this);  // pass in the this reference that points to user2 (this doesn't work for all methods)  // explicit scope
   }
 }
 
