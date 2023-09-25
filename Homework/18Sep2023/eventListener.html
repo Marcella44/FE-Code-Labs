@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>doc</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 30px;
+    }
+  </style>
+  
+</head>
+<body>
+
+
+
+
+  <!-- OPTION ONE -->
+  <div class="jumbotron text-center">
+    <button class="btn btn-danger" onclick="goCoocoo()">Go goCoocoo
+    </button>
+  </div>
+
+
+
+
+  <!-- OPTION TWO - Use events directly on the element in JS-->
+  <div class="jumbotron text-center">
+    <button class="btn btn-danger coffee-btn">Get Coffee
+    </button> 
+    <button class="btn btn-danger coffee-btn">Get Coffee
+    </button>
+    <button class="btn btn-danger coffee-btn">Get Coffee
+    </button>
+  </div>
+
+
+
+
+  <!-- OPTIONS 3 - using addEventListener-->
+  <div class="jumbotron text-center">
+    <button class="btn btn-primary lala-btn">Not Listening
+    </button>
+  </div>
+
+  <script>
+    function goCoocoo() {
+      document.body.style.backgroundColor = '#C00C00';
+    }
+  
+    
+    
+    // OPTION TWO
+
+    const coffeeButton = document.querySelectorAll('.coffee-btn');
+    // coffeeButton.onclick = function() {
+    //   document.body.style.backgroundColor = '#C0FFEE';
+    // }
+    // coffeeButton.onmouseenter = goCoocoo;
+
+    function getCoffee() {
+      document.body.style.backgroundColor = '#C0FFEE';
+    }
+
+    coffeeButton.forEach(function(button) {
+      button.onclick = getCoffee;
+    });
+
+
+
+
+    //OPTION THREE -looks cleaner
+
+    const lalaButton = document.querySelector('.lala-btn');
+
+    function notListening() {
+      document.body.style.backgroundColor = '#1A1A1A';
+    }
+
+    lalaButton.addEventListener('click', notListening);
+    lalaButton.addEventListener('mouseenter', goCoocoo);
+
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => button.addEventListener('mouseleave', notListening));
+  </script>
+  </body>
+</html>
