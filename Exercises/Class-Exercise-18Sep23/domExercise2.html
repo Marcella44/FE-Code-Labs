@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="Exercise2.js"></script>
+</head>
+<body>
+
+  <button class="btn btn_inline">I am a button</button>
+
+  <script>
+
+    const button = document.querySelector('.btn');
+
+    function changeBackground() {
+      document.body.style.backgroundColor = '#000'
+    }
+
+    button.addEventListener('click', changeBackground);
+
+  </script>
+</body>
+</html>
