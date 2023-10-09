@@ -1,0 +1,5 @@
+<h1>Bind It!</h1>
+<app-game-control (gameCount)="gameLogged($event)"></app-game-control>
+<app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
+<app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even>
+

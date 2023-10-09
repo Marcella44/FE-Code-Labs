@@ -1,0 +1,8 @@
+<div
+  class="panel panel-default">
+      <!-- <div class="panel-heading">{{ element.name }}</div> -->
+        <div class="panel-body" #heading>{{ name }}</div>
+        <div class="panel-body">
+          <ng-content></ng-content>  <!-- directive that serves as a hook to mark for angular where to add content -->
+        </div>
+      </div>
