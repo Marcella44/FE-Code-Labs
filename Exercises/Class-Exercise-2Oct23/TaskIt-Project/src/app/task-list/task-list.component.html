@@ -1,0 +1,77 @@
+<h2>Task List</h2>
+
+
+<div class="filters">
+  <span style="font-weight: 600">Filters:</span>
+
+  <select name="status" id="status">
+    <option value="status">Status</option>
+    <option value="toDo">To Do</option>
+    <option value="inProgress">In Progress</option>
+    <option value="complete">Complete</option>
+  </select>
+
+  <select name="date" id="date">
+    <option value="fdafda">Date</option>
+    <option value="fdafda">Oldest</option>
+    <option value="fdafda">Newest</option>
+  </select>
+
+  <select name="priortiy" id="priority">
+    <option value="priority">Priority</option>
+    <option value="high">High</option>
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+  </select>
+
+  <button
+    class="btn btn-success float-right add-task-button"
+    data-toggle="modal" data-target="#exampleModal"
+  >    Add New Task
+  </button>
+</div>
+<table class="table taskTable table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Due Date</th>
+      <th>Priority</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="itemAlign text-center" *ngFor="let task of tasks">
+      <td>{{ task.title }}</td>
+      <td>{{ task.dueDate }}</td>
+      <td>{{ task.priority }}</td>
+      <td>{{ task.status }}</td>
+
+      <button class="btn btn-info btn-sm fixed-widthButton">View</button>
+      <button class="btn btn-warning btn-sm fixed-widthButton">Edit</button>
+      <button class="btn btn-danger btn-sm fixed-widthButton">Delete</button>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog .modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add a New Task</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-add-task-form></app-add-task-form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success">Create</button>
+      </div>
+    </div>
+  </div>
+</div>

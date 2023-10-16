@@ -1,0 +1,32 @@
+<form action="submit" class="row .row-cols-md-2">
+
+  <!-- Task Name -->
+  <div class="col">
+  <label for="title"></label>
+  <input type="text" id="name" name="name" required /><br />
+
+  <!-- Description -->
+  <label for="description"></label><br />
+  <textarea id="message" name="message" cols="50" required></textarea
+  >
+</div>
+<div class="col">
+  <!-- Date -->
+  <input type="date" />
+
+  <!-- Drop down selections -->
+  <select name="status" id="status">
+    <option value="status">Status</option>
+    <option value="toDo">To Do</option>
+    <option value="inProgress">In Progress</option>
+    <option value="complete">Complete</option>
+  </select>
+
+  <select name="priortiy" id="priority">
+    <option value="priority">Priority</option>
+    <option value="high">High</option>
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+  </select>
+</div>
+</form>

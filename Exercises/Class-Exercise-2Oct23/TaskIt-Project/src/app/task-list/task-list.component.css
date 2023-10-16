@@ -1,0 +1,30 @@
+/* .taskListContainer {
+  padding: 20px;
+  background-color: red;
+}
+ */
+th {
+  color: grey;
+  font-weight: 400;
+}
+
+.fixed-widthButton {
+  width: 50px;
+  font-size: 10px;
+  font-weight: 800;
+  color: black;
+  vertical-align: center;
+}
+
+.itemAlign {
+
+  /* justify-content: space-evenly; */
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.add-task-button {
+  /* margin: 5px; */
+}

@@ -1,0 +1,15 @@
+.appContainer {
+  display: flex;
+
+}
+
+.sidebarContainer {
+  width: 200px;
+  height: 100vh;
+  border: 2px solid gray;
+}
+
+.taskListContainer {
+  padding: 100px;
+}
+
